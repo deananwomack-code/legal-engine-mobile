@@ -23,17 +23,15 @@ In the output, you'll find options to open the app in a
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+You can start developing by editing the files inside the **app** directory, which already includes a basic [Expo Router](https://docs.expo.dev/router/introduction/) layout. The starter screen is located at `app/index.tsx`, and the stack navigator is defined in `app/_layout.tsx`.
 
-## Get a fresh project
-
-When you're ready, run:
+If you want a blank slate, you can move the current starter into `app-example/` and recreate an empty `app/` folder with:
 
 ```bash
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This script lives at `scripts/reset-project.js` and only operates on the `app/` and `app-example/` directories in the project root.
 
 ## Learn more
 
