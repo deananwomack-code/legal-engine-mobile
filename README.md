@@ -1,48 +1,167 @@
-# Welcome to your Expo app 👋
+# Legal Engine Mobile
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A professional, production-ready mobile application for legal document management built with Expo and React Native.
 
-## Get started
+## ✨ Features
 
-1. Install dependencies
+- 📱 **Tab-based Navigation** - Intuitive 4-tab navigation (Home, Documents, Create, Settings)
+- 📄 **Document Management** - Create, view, search, and manage legal documents
+- 🎨 **Modern UI** - Professional interface following Material Design guidelines
+- 🔒 **Database Integration** - Supabase backend ready for data persistence
+- 🚀 **Performance Optimized** - Optimized for Android deployment
+- 💪 **TypeScript** - Full type safety throughout the application
+- 🛡️ **Error Handling** - Comprehensive error management and loading states
+- 📦 **Reusable Components** - Production-ready component library
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory, which already includes a basic [Expo Router](https://docs.expo.dev/router/introduction/) layout. The starter screen is located at `app/index.tsx`, and the stack navigator is defined in `app/_layout.tsx`.
-
-If you want a blank slate, you can move the current starter into `app-example/` and recreate an empty `app/` folder with:
+## 🚀 Quick Start
 
 ```bash
-npm run reset-project
+# Install dependencies
+npm install
+
+# Configure environment (add your Supabase credentials)
+cp .env.example .env
+
+# Start development server
+npx expo start
 ```
 
-This script lives at `scripts/reset-project.js` and only operates on the `app/` and `app-example/` directories in the project root.
+For detailed setup instructions, see [QUICK_START.md](QUICK_START.md)
 
-## Learn more
+## 📱 Android Deployment
 
-To learn more about developing your project with Expo, look at the following resources:
+This app is optimized for Android deployment with:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- ✅ Proper Android configuration
+- ✅ Required permissions configured
+- ✅ Adaptive icons ready
+- ✅ Performance optimizations
+- ✅ Material Design compliance
 
-## Join the community
+For complete Android deployment instructions, see [ANDROID_DEPLOYMENT.md](ANDROID_DEPLOYMENT.md)
 
-Join our community of developers creating universal apps.
+## 📋 Documentation
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **[QUICK_START.md](QUICK_START.md)** - Get started in 5 minutes
+- **[ANDROID_DEPLOYMENT.md](ANDROID_DEPLOYMENT.md)** - Complete Android deployment guide
+- **[OPTIMIZATION_REPORT.md](OPTIMIZATION_REPORT.md)** - Detailed optimization analysis
+
+## 🏗️ Project Structure
+
+```
+legal-engine-mobile/
+├── app/                    # Screens and routes
+│   └── (tabs)/            # Tab navigation screens
+├── components/            # Reusable UI components
+├── config/               # App configuration
+├── hooks/                # Custom React hooks
+├── lib/                  # External library configs
+├── services/             # API services
+├── types/                # TypeScript types
+└── utils/                # Utility functions
+```
+
+## 🛠️ Technology Stack
+
+- **Framework**: Expo SDK 54
+- **Language**: TypeScript
+- **Navigation**: Expo Router 6
+- **Database**: Supabase
+- **Icons**: Lucide React Native
+- **Platform**: React Native 0.81.5
+
+## 📦 Key Components
+
+### Screens
+- **Home** - Dashboard with stats and quick actions
+- **Documents** - Document list with search and filters
+- **Create** - Document creation workflow
+- **Settings** - User preferences and account management
+
+### Reusable Components
+- **Button** - Multi-variant button (primary, secondary, outline, danger)
+- **Card** - Flexible card container
+- **Input** - Form input with validation
+- **LoadingScreen** - Loading state display
+- **ErrorView** - Error handling display
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env` file with:
+
+```env
+EXPO_PUBLIC_SUPABASE_URL=your_supabase_url
+EXPO_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+EXPO_PUBLIC_APP_NAME=Legal Engine Mobile
+EXPO_PUBLIC_API_URL=https://api.yourapp.com
+```
+
+### Android Configuration
+
+Key settings in `app.json`:
+- Package: `com.legalengine.mobile`
+- Permissions: Internet, Storage
+- Adaptive icons configured
+- Splash screen optimized
+
+## 🧪 Development
+
+```bash
+# Start development server
+npx expo start
+
+# Run on Android
+npx expo run:android
+
+# Clear cache and restart
+npx expo start -c
+
+# Type checking
+npx tsc --noEmit
+```
+
+## 📈 Performance Optimizations
+
+- ✅ Hermes engine enabled
+- ✅ Optimized bundle size
+- ✅ Efficient re-renders
+- ✅ Proper memory management
+- ✅ Image optimization strategies
+- ✅ Network request optimization
+
+## 🔐 Security Features
+
+- ✅ Environment variables for sensitive data
+- ✅ No hardcoded credentials
+- ✅ Input validation and sanitization
+- ✅ Secure storage patterns ready
+- ✅ Type-safe API calls
+
+## 🎯 What's Next?
+
+1. **Database Setup** - Configure Supabase database
+2. **Authentication** - Add user authentication
+3. **Testing** - Test on physical Android devices
+4. **Customization** - Update branding and assets
+5. **Deployment** - Build and submit to Play Store
+
+## 📚 Learn More
+
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Native Documentation](https://reactnative.dev/)
+- [Supabase Documentation](https://supabase.com/docs)
+- [Expo Router Documentation](https://docs.expo.dev/router/introduction/)
+
+## 🤝 Contributing
+
+This is a production-ready template. Feel free to customize and extend it for your needs.
+
+## 📄 License
+
+This project is available for use in your applications.
+
+---
+
+**Built with ❤️ using Expo and React Native**
