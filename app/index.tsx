@@ -1,13 +1,17 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useRouter } from 'expo-router';
 import { View, StyleSheet, ActivityIndicator } from 'react-native';
 
 export default function Index() {
   const router = useRouter();
 
-  useEffect(() => {
+  const navigateToTabs = useCallback(() => {
     router.replace('/(tabs)');
-  }, []);
+  }, [router]);
+
+  useEffect(() => {
+    navigateToTabs();
+  }, [navigateToTabs]);
 
   return (
     <View style={styles.container}>

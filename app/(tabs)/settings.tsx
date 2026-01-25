@@ -13,7 +13,7 @@ export default function SettingsScreen() {
       items: [
         { id: 'profile', label: 'Profile Settings', icon: User, type: 'navigation' },
         { id: 'notifications', label: 'Notifications', icon: Bell, type: 'toggle', value: notificationsEnabled, onToggle: setNotificationsEnabled },
-        { id: 'security', label: 'Security & Privacy', icon: Lock, type: 'navigation' },
+        { id: 'security', label: 'Security & Privacy', icon: Lock, type: 'toggle', value: biometricsEnabled, onToggle: setBiometricsEnabled },
       ]
     },
     {
